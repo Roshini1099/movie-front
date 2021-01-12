@@ -3,8 +3,12 @@ import PropTypes from 'prop-types';
 import Backdrop from '../Backdrop/index';
 import './modal.css';
 
-const Modal = props => ( <Fragment >
-    <Backdrop show = { props.show }
+const Modal = props => {
+//console.log(props.modalClosed);
+return(
+    <Fragment >
+
+    < Backdrop show = { props.show }
     clicked = { props.modalClosed }
     /> 
     <div className = "Modal"
@@ -18,6 +22,8 @@ const Modal = props => ( <Fragment >
     </div> 
     </Fragment>
 );
+   
+};
 
 Modal.propTypes = {
     show: PropTypes.bool,
